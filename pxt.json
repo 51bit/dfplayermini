@@ -1,7 +1,7 @@
 {
     "name": "dfplayermini",
     "version": "0.0.4",
-    "description": "makecode pxt extension for DFPlayerMini",
+    "description": "makecode pxt extension for DFPlayer Mini",
     "license": "MIT",
     "dependencies": {
         "core": "*"
