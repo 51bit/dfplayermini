@@ -1,0 +1,15 @@
+{
+    "name": "dfplayermini",
+    "version": "0.0.1",
+    "description": "makecode pxt extension for DFPlayerMini",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/dfplayermini-strings.json"
+    ],
+    "public": true
+}
