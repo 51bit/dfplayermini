@@ -7,6 +7,7 @@
 namespace dfplayermini {
     /* [$S,VER,Len,CMD,Feedback,para1,para2,checksum,$0] */
     let dataArr: number[] = [0x7E, 0xFF, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xEF]
+    let isConnected: boolean = false;
 
     export enum playType {
         //% block="Play"
@@ -37,10 +38,10 @@ namespace dfplayermini {
     }
 
     export enum isRepeat {
-        //% block="no"
-        no = 0,
-        //% block="yes"
-        yes = 1
+        //% block="No"
+        No = 0,
+        //% block="Yes"
+        Yes = 1
     }
 
     function checkSum(): void {
@@ -63,6 +64,10 @@ namespace dfplayermini {
     }
 
     function innerCall(CMD: number, para1: number, para2: number): void {
+        if (!isConnected) {
+            connect(SerialPin.P0, SerialPin.P1)
+            isConnected = true
+        }
         dataArr[3] = CMD
         dataArr[5] = para1
         dataArr[6] = para2
@@ -79,6 +84,7 @@ namespace dfplayermini {
     //% weight=100 blockGap=20
     export function connect(pinRX: SerialPin = SerialPin.P0, pinTX: SerialPin = SerialPin.P1): void {
         serial.redirect(pinRX, pinTX, BaudRate.BaudRate9600)
+        isConnected = true
         basic.pause(100)
     }
 
