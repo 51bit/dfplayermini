@@ -1,6 +1,6 @@
 {
     "name": "dfplayermini",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Makecode pxt extension for DFPlayer Mini",
     "license": "MIT",
     "dependencies": {
