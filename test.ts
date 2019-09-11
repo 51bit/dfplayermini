@@ -1,9 +1,9 @@
 input.onButtonPressed(Button.AB, function () {
     dfplayermini.setEQ(dfplayermini.EQ.Jazz)
-    dfplayermini.playFileInFolder(1, 1, dfplayermini.isRepeat.no)
+    dfplayermini.playFileInFolder(1, 1, dfplayermini.isRepeat.No)
 })
 input.onButtonPressed(Button.A, function () {
-    dfplayermini.playFile(1, dfplayermini.isRepeat.no)
+    dfplayermini.playFile(1, dfplayermini.isRepeat.No)
 })
 input.onButtonPressed(Button.B, function () {
     dfplayermini.playLoopFolder(1)
