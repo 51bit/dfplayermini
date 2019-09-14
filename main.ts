@@ -3,7 +3,7 @@
 * Refer to https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
 */
 
-//% weight=9 color=#a0e51e icon="\uf001" block="DFPlayer Mini"
+//% weight=9 color=#1F2EDE icon="\uf001" block="DFPlayer Mini"
 namespace dfplayermini {
     /* [$S,VER,Len,CMD,Feedback,para1,para2,checksum,$0] */
     let dataArr: number[] = [0x7E, 0xFF, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xEF]
@@ -66,7 +66,6 @@ namespace dfplayermini {
     function innerCall(CMD: number, para1: number, para2: number): void {
         if (!isConnected) {
             connect(SerialPin.P0, SerialPin.P1)
-            isConnected = true
         }
         dataArr[3] = CMD
         dataArr[5] = para1
@@ -124,7 +123,7 @@ namespace dfplayermini {
     //% blockId="dfplayermini_setVolume" block="set volume(0~30):%volume"
     //% weight=94 blockGap=20 volume.min=0 volume.max=30
     export function setVolume(volume: number): void {
-        innerCall(0x06, 0x00, volume)
+        innerCall(0x06, 0x00, volume | 0)
     }
 
     //% blockId="dfplayermini_setEQ" block="set EQ:%eq"
