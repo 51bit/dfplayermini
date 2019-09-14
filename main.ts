@@ -3,7 +3,7 @@
 * Refer to https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
 */
 
-//% weight=9 color=#cc99cc icon="\uf001" block="DFPlayer Mini"
+//% weight=9 color=#666699 icon="\uf001" block="DFPlayer Mini"
 namespace dfplayermini {
     /* [$S,VER,Len,CMD,Feedback,para1,para2,checksum,$0] */
     let dataArr: number[] = [0x7E, 0xFF, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xEF]
