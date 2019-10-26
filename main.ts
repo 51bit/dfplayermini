@@ -76,8 +76,8 @@ namespace dfplayermini {
 
     /**
      * Connect DFPlayer Mini
-     * @param pinRX RX Pin, eg: SerialPin.P1
-     * @param pinTX TX Pin, eg: SerialPin.P2
+     * @param pinRX RX Pin, eg: SerialPin.P0
+     * @param pinTX TX Pin, eg: SerialPin.P1
      */
     //% blockId="dfplayermini_connect" block="connect to DFPlayer mini, RX:%pinRX|TX:%pinTX"
     //% weight=100 blockGap=20
