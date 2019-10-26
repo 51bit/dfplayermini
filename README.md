@@ -9,6 +9,8 @@ makecode pxt extension for Xuefeng DFPlayer Mini Audio Board
 
 ![Alt text](https://github.com/51bit/DFPlayerMini/raw/master/icon2.png?raw=true "DFPlayer Mini Audio Board picture")
 
+![Alt text](https://github.com/51bit/DFPlayerMini/raw/master/icon3.jpg?raw=true "DFPlayer Mini Audio Board picture 2")
+
 ## Basic Usage
 
 ```blocks
